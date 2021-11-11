@@ -22,7 +22,7 @@ public class HomeController {
         model.addAttribute("customer", service.getAllCustomerByStatus(Status.NEW));
         return "index";
     }
-    @PostMapping("/add")
+    @PostMapping("/create")
     public String addCustomer(@ModelAttribute Customer customer, Model model){
         service.createCustomer(customer);
         model.addAttribute("customer",customer);
